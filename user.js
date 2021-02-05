@@ -27,13 +27,17 @@ var firebaseConfig = {
     const auth = firebase.auth()
 //end config Firebase   
 
-console.log('charge user is logged: '+auth.user);
 
 
-//test session
+//test session opened ?
 auth.onAuthStateChanged((user) => {
     if (user) {
       console.log('user is logged: '+user.uid);
+      console.log(user)
+      identification.classList.add("hidded")
+      LinkAffIdent.classList.add('hidded')
+      linkDeconnexion.querySelector('.user').innerHTML = user.displayName
+      linkDeconnexion.classList.remove('hidded')
     }
 });
 //end test
@@ -91,7 +95,7 @@ formLogin.addEventListener("submit", (e) => {
     let email = formLogin.querySelector(".login-input-login").value
     let password = formLogin.querySelector(".login-input-password").value
     // [START authwithemail]
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE) //SESSION, LOCAL (défaut), NONE
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL) //SESSION, LOCAL (défaut), NONE
     .then(function() {
       firebase.auth().signInWithEmailAndPassword(email, password)
       .then(function() {
