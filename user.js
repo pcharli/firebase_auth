@@ -27,7 +27,14 @@ var firebaseConfig = {
     const auth = firebase.auth()
 //end config Firebase
 
-console.log(auth.currentUser)
+//test session
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log('user is logged: '+user);
+    }
+});
+//end test
+
 
 // events ui
 
