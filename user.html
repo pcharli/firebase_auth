@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="user.css">
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="page container content">
+        <div class="identification hidded">
+            <a href="" class="identification-close delete"></a>
+            <h1 class="identification-title title">Se connecter</h1>
+        <form action="" class="form form-login hidden">
+            <input type="email" class="input login-input-login" required name="login" placeholder="email"> <span class="required">*</span>
+            <input type="password" class="input login-input-password" required name="password"  placeholder="password">
+            <button class="button login-button">Se connecter</button><hr>
+            <a href="" class="newAccountLink">Pas encore de compte ?</a>
+        </form>
+        <form action="" class="form form-logon hidded">
+            <input type="email" class="input logon-input-login" name="login" required placeholder="email">
+            <input type="password" class="input logon-input-password" name="password" required placeholder="password">
+            <input type="text" class="input logon-input-username" name="username" required placeholder="pseudo">
+            <button class="button logon-button">Créer un compte</button><hr>
+            <a href="" class="isAccountLink">Déjà un compte ?</a>
+        </form>
+        <div class="not-verified hidded">
+            <h1>Votre compte n'a pas été vérifié</h1>
+            <p>Veuillez consulter vos emails et cliquer sur le lien de confirmation</p>
+            <button class="button not-verified-btn">Renvoyer un email de confirmation</button>
+        </div>
+        </div>
+        <header class="hero">
+            <div class="hero-body">
+                <h1 class="title">Utilisateur</h1>
+                <a href="" class="affLinkConnexion">S'identifier</a>
+                <a href="" class="linkDeconnexion hidded"><span class="user">Name</span> | Se déconnecter</a>
+            </div>
+        </header>
+    </div>
+    <script src="user.js"></script>
+</body>
+</html>

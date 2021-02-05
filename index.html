@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <style>
+        .updateArea {
+            display: none;
+        }
+        .notverified {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>New user</h1>
+    <form class="inscription" action="">
+        <label for="">nom</label>
+        <input type="text" name="nom">
+        <br>
+        <label for="">email</label>
+        <input type="email" name="email">
+        <br>
+        <label for="">pass</label>
+        <input type="password" name="password">
+        <br>
+        <button>Inscrire</button>
+    </form>
+
+    <h1>Connexion</h1>
+    <form class="connexion" action="">
+        <label for="">email</label>
+        <input type="email" name="login_email" value="lretlo@gmail.com">
+        <br>
+        <label for="">pass</label>
+        <input type="password" name="login_password" value="password">
+        <br>
+        <button>Connexion</button>
+    </form>
+    <div class="updateArea">
+        <h1>Update</h1>
+        <form class="update" action="">
+            <label for="">nom</label>
+            <input type="text" name="update_nom">
+            <br>
+            <label for="">email</label>
+            <input type="email" name="update_email">
+            <br>
+            <label for="">pass</label>
+            <input type="password" name="update_password">
+            <br>
+            <button>Update</button>
+        </form>
+        <button class="deconnexion">Deconnexion</button>
+        <button class="delete">Delete user</button>
+    </div>
+
+    <div class="prix"></div>
+     <script src="myFirebase.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.identification {
+    position: absolute;
+    border: 1px solid silver;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    left: 50%;
+    margin-left: -25%;
+    margin-top: 2rem;
+}
+.hidded {
+    display:none;
+}
+.identification input {
+    width: 90%;
+}
+.identification .required {
+    color: red;
+}
