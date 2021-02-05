@@ -25,12 +25,15 @@ var firebaseConfig = {
   //raccourcis
     const db = firebase.firestore()
     const auth = firebase.auth()
-//end config Firebase
+//end config Firebase   
+
+console.log('charge user is logged: '+auth.user);
+
 
 //test session
-firebase.auth().onAuthStateChanged((user) => {
+auth.onAuthStateChanged((user) => {
     if (user) {
-      console.log('user is logged: '+user);
+      console.log('user is logged: '+user.uid);
     }
 });
 //end test
