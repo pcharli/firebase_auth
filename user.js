@@ -27,7 +27,7 @@ var firebaseConfig = {
     const auth = firebase.auth()
 //end config Firebase
 
-
+console.log(auth.currentUser)
 
 // events ui
 
